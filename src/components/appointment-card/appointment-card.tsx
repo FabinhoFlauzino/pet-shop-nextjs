@@ -1,18 +1,26 @@
-import { cn } from "@/lib/utils"
-import { Appointment } from "@/types/appointment"
+import { cn } from '@/lib/utils';
+import { Appointment } from '@/types/appointment';
 
 type AppointmentCardProps = {
-  appointment: Appointment
-  isFirstInSection?: boolean
-}
+  appointment: Appointment;
+  isFirstInSection?: boolean;
+};
 
-export function AppointmentCard({ appointment, isFirstInSection = false }: AppointmentCardProps) {
+export function AppointmentCard({
+  appointment,
+  isFirstInSection = false,
+}: AppointmentCardProps) {
   return (
-    <div className={cn("grid grid-cols-2 md:grid-cols-[15%_35%_30%_20%] items-center py-3",
-        !isFirstInSection && "border-t border-border-divisor"
-      )}>
+    <div
+      className={cn(
+        'grid grid-cols-2 md:grid-cols-[15%_35%_30%_20%] items-center py-3',
+        !isFirstInSection && 'border-t border-border-divisor'
+      )}
+    >
       <div className="text-left pr-4 md:pr-0">
-        <span className="text-label-small-size text-content-primary font-semibold">{appointment.time}</span>
+        <span className="text-label-small-size text-content-primary font-semibold">
+          {appointment.time}
+        </span>
       </div>
 
       <div className="text-right md:text-left md:pr-4">
@@ -20,7 +28,9 @@ export function AppointmentCard({ appointment, isFirstInSection = false }: Appoi
           <span className="text-label-small-size text-content-primary font-semibold">
             {appointment.petName}
           </span>
-          <span className="text-paragraph-small-size text-content-secondary">/</span>
+          <span className="text-paragraph-small-size text-content-secondary">
+            /
+          </span>
           <span className="text-paragraph-small-size text-content-secondary">
             {appointment.tutorName}
           </span>
@@ -33,5 +43,5 @@ export function AppointmentCard({ appointment, isFirstInSection = false }: Appoi
         </span>
       </div>
     </div>
-  )
+  );
 }

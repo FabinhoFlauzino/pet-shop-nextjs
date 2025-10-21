@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import { Toaster } from 'sonner';
-import "@/styles/globals.css"
+import '@/styles/globals.css';
 
 const inter = Inter({
   variable: '--font-inter',
@@ -29,8 +29,6 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <body className={`${inter.variable} ${interTight.variable} antialiased`}>
-       
-
         <div className="max-w-3xl mx-auto">
           <main className="flex-1 flex flex-col mt-12">
             {children}
