@@ -18,7 +18,16 @@ const eslintConfig = [
       "out/**",
       "build/**",
       "next-env.d.ts",
+      "pgdata/**",
+      "src/generated/prisma/**"
     ],
+  },
+  {
+    files: ['**/*.{js,jsx,ts,tsx}'],
+    rules: {
+      'arrow-body-style': 'off',
+      'prefer-arrow-callback': 'off'
+    },
   },
 ];
 
